@@ -55,3 +55,8 @@ The 'presence' validator is implemented like so:
 
 		return false;
 	});
+
+Now we can use that custom function by specifying its name when adding a validation:
+	v.addValidation('#username', 'presence');
+
+
