@@ -23,7 +23,9 @@ Now you have set up validation on two fields and bound to the submit event of th
 
 You also can have more control over how and when validation is fired. Simply caling validate() whenever you would like to validate is possible from whatever event you choose. 
 
-To immediately receive the validation result by using the option afterValidated.	var v = new OhNoValidation({ afterValidated: function(result) {
+To immediately receive the validation result when validation is complete, use the option 'afterValidated' by either setting it independently or including it upon object instantiation.
+
+	var v = new OhNoValidation({ afterValidated: function(result) {
 		alert('Validation returned '+result);
 	}});
 
