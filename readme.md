@@ -1,9 +1,9 @@
 jQuery.OhNo
 ===========
 
-_Summary_: jQuery.OhNo is a simple client-side validation framework designed to make hooking into your DOM elements and validating them simple.
+*_Summary_*: _jQuery.OhNo_ is a simple client-side validation library designed to make hooking into your DOM elements and validating them simple.
 
-_Usage_:
+*_Usage_*:
 
 1. Create a new instance of the OhNoValidation object.
 2. Add validation checks by calling the addValidation method.
@@ -19,9 +19,7 @@ A simple example:
 		v.bindForm('#form');
 	});
 
-Now you have set up validation on two fields and bound to the submit event of the page's form tag. Simple.
-
-You also can have more control over how and when validation is fired. Simply calling validate() whenever you would like to validate is possible from whatever event you choose. 
+Now you have set up validation on two fields and bound to the submit event of the page's form tag. _Simple_. You also can have more control over how and when validation is fired. Simply calling _validate()_ whenever you would like to validate is possible from whatever event you choose. 
 
 To immediately receive the validation result when validation is complete, use the option 'afterValidated' by either setting it independently or including it upon object instantiation.
 
@@ -34,11 +32,11 @@ To immediately receive the validation result when validation is complete, use th
 	});
 
 _Custom Validators_:
-Implementing custom validators is extremely simple. By calling the addValidatorFunction method, you can register your own. Only a few guidelines are necessary.
+Implementing custom validators is extremely simple. By calling the _addValidatorFunction_ method, you can register your own. Only a few guidelines are necessary.
 
 Your function must accept selector, name, and options (hash) and return a boolean value indicating the end-result.
 
-The 'presence' validator is implemented like so:
+_The 'presence' validator is implemented like so_:
 
 	v.addValidatorFunction('presence', function(selector, name, options) {
 		var trim = function(str) {
