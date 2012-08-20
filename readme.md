@@ -21,9 +21,11 @@ A simple example:
 
 Now you have set up validation on two fields and bound to the submit event of the page's form tag. Simple.
 
-You also can have more control over how and when validation is fired. Simply caling validate() whenever you would like to validate is possible. 
+You also can have more control over how and when validation is fired. Simply caling validate() whenever you would like to validate is possible from whatever event you choose. 
 
-You can also immediately receive the validation result by using the option afterValidated.
+To immediately receive the validation result by using the option afterValidated.	var v = new OhNoValidation({ afterValidated: function(result) {
+		alert('Validation returned '+result);
+	}});
 
 	v.setOption('afterValidated', function(result) {
 		alert('Validation returned '+result);	// Returns boolean value of true or false
