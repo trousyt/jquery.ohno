@@ -10,7 +10,7 @@ function OhNoValidation(options) {
 	/** TODO
 	  * (X) Implement addValidation options for alias, message, and severity.
 		* (X) Implement addValidation option for alertContainer.
-		* Finish render function.
+		* (X) Finish render function.
 	  */
 	
 	// Define instance vars.
@@ -68,11 +68,11 @@ function OhNoValidation(options) {
 	//	name: alias for validator function
 	//	options: additional options passed to validator function
 	//	returns: a boolean value indicating success (t) or failure (f)
-	var addValidatorFunction = function(name, validator) {
+	var registerValidator = function(name, validator) {
 		if (typeof(validator) == 'function') {
 			validators.push({ name:name, fn: validator });
 		} else {
-			log('addValidatorFunction: Can not add non-function object!');
+			log('registerValidator: Can not add non-function object!');
 		}
 	}
 	
@@ -208,7 +208,7 @@ function OhNoValidation(options) {
 	}
 	
 	// Add default validator functions.
-	addValidatorFunction('presence', function(selector, name, options) {
+	registerValidator('presence', function(selector, name, options) {
 		var el = $(selector);
 		if (el.length) {
 			var val = el.val();

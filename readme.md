@@ -32,13 +32,13 @@ To immediately receive the validation result when validation is complete, use th
 	});
 
 _Custom Validators_:
-Implementing custom validators is extremely simple. By calling the _addValidatorFunction_ method, you can register your own. Only a few guidelines are necessary.
+Implementing custom validators is extremely simple. By calling the _registerValidator_ method, you can register your own. Only a few guidelines are necessary.
 
 Your function must accept selector, name, and options (hash) and return a boolean value indicating the end-result.
 
 _The 'presence' validator is implemented like so_:
 
-	v.addValidatorFunction('presence', function(selector, name, options) {
+	v.registerValidator('presence', function(selector, name, options) {
 		var trim = function(str) {
 			return this.replace(/^[\t]+|[ \t]+$/g, '');
 		};
